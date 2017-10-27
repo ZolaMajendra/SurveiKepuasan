@@ -73,6 +73,7 @@
                     @if (Auth::check())
                         <a href="{{ url('/home') }}">Home</a>
                     @else
+                        <a href="{{ url('/') }}"><span class="glyphicon glyphicon-home"></span></a>
                         <a href="{{ url('/login') }}">Login</a>
                         <a href="{{ route('admin.login') }}">Login Admin</a>
                     @endif
@@ -85,7 +86,7 @@
                         <img src="adminlte/dist/img/pln2.png" alt="PLNImage" width="300" height="420">
                     </div>
                     <div class="m-b-md" style="padding-top: 50px; font-size: 20px">
-                        <span>Portal Improvement Kinerja Auditor SPI PT PLN (Persero) Regional 19</span>
+                        <strong><span>Portal Improvement Kinerja Auditor SPI PT PLN (Persero) Regional 19</span></strong>
                     </div>
                 </div>
             </div>

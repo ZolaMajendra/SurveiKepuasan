@@ -15,5 +15,13 @@
                 </div>
             </div>
         </div>
+        <div class="flex-center position-ref full-height">
+                <div class="logo m-b-md">
+                    <div class="image" align="center">
+                        <img src="adminlte/dist/img/pln2.png" alt="PLNImage" width="300" height="420">
+                    </div>
+                </div>
+        </div>
     </div>
+
 @endsection
