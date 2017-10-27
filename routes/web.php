@@ -12,6 +12,10 @@
 */
 
 Route::get('/', function () {
+    return view('firstpage');
+});
+
+Route::get('/esurvei', function () {
     return view('welcome');
 });
 
