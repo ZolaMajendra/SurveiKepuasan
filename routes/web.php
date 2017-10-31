@@ -217,3 +217,6 @@ Route::get('/downLoad/{filename}', function ($filename){
         return response()->download($path);
     }
 })->name('downLoad');
+
+/*For EAS*/
+Route::get('/eas', 'EasController@index')->name('easindex');
