@@ -39,16 +39,22 @@ class LoginController extends Controller
 
     protected function authenticated($request, $users)
     {
-        if($users->auditee == 1)
-        {
-            return redirect()->intended('/auditee');
-        }
-        elseif ($users->auditee == 2)
-        {
-            return redirect()->intended('/auditorplus');
+        if($users->is_eas == 1){
+            return redirect()->intended('/easauditor');
         }
         else{
-            return redirect()->intended('/auditor');
+            if($users->auditee == 1)
+            {
+                return redirect()->intended('/auditee');
+            }
+            elseif ($users->auditee == 2)
+            {
+                return redirect()->intended('/auditorplus');
+            }
+            else{
+                return redirect()->intended('/auditor');
+            }
         }
+        
     }
 }

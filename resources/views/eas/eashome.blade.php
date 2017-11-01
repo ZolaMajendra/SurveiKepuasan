@@ -74,8 +74,8 @@
                         <a href="{{ url('/home') }}">Home</a>
                     @else
                         <a href="{{ url('/') }}"><span class="glyphicon glyphicon-home"></span></a>
-                        <a href="{{ url('/login') }}">Login Auditor Plus, Auditor, dan Auditee</a>
-                        <a href="{{ route('admin.login') }}">Login Admin</a>
+                        <a href="{{ url('/login') }}">Login as Auditor</a>
+                        <a href="{{ route('easadmin.login') }}">Login Admin</a>
                     @endif
                 </div>
             @endif
@@ -86,7 +86,7 @@
                         <img src="adminlte/dist/img/pln2.png" alt="PLNImage" width="300" height="420">
                     </div>
                     <div class="m-b-md" style="padding-top: 50px; font-size: 20px">
-                        <strong><span>E-Survey</span></strong>
+                        <strong><span>Expert Audit System</span></strong>
                     </div>
                 </div>
             </div>
