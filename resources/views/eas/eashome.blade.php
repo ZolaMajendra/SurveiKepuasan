@@ -74,8 +74,8 @@
                         <a href="{{ url('/home') }}">Home</a>
                     @else
                         <a href="{{ url('/') }}"><span class="glyphicon glyphicon-home"></span></a>
-                        <a href="{{ url('/eas/auditor') }}">Login as Auditor</a>
-                        <a href="{{ url('/eas/admin') }}">Login Admin</a>
+                        <a href="{{ url('/login') }}">Login as Auditor</a>
+                        <a href="{{ route('easadmin.login') }}">Login Admin</a>
                     @endif
                 </div>
             @endif

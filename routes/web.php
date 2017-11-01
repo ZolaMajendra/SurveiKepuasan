@@ -220,3 +220,11 @@ Route::get('/downLoad/{filename}', function ($filename){
 
 /*For EAS*/
 Route::get('/eas', 'EasController@index')->name('easindex');
+
+Route::prefix('eas')->group(function() {
+    Route::get('/easadmin', 'Auth\AdminLoginController@showEasLoginForm')->name('easadmin.login');
+    Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+    Route::get('/adminhome', 'EasAdminController@index')->name('easadminhome');
+});
+
+Route::get('easauditor', 'EasAuditorController@index')->name('easauditor');
