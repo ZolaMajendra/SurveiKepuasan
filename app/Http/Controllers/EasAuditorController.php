@@ -26,4 +26,8 @@ class EasAuditorController extends Controller
     {
         return view('eas.auditorhome');
     }
+
+    public function showIdentitasForm(){
+    	return view('eas.identitasform');
+    }
 }

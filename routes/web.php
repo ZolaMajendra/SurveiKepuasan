@@ -228,3 +228,6 @@ Route::prefix('eas')->group(function() {
 });
 
 Route::get('easauditor', 'EasAuditorController@index')->name('easauditor');
+Route::prefix('easauditor')->group(function() {
+    Route::get('/identitas', 'EasAuditorController@showIdentitasForm')->name('identitas_auditor');
+});
