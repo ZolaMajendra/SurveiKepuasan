@@ -1,4 +1,4 @@
-@extends('layouts.headerfooterauditor')
+@extends('layouts.headerfootereasauditor')
 
 @section('content')
 
@@ -7,24 +7,18 @@
         <li class="header">MAIN NAVIGATION</li>
 
         <li class="active treeview">
-            <a href="{{route('auditor')}}">
+            <a href="{{route('easauditor')}}">
                 <i class="fa fa-home"></i>
                 <span>Home</span>
             </a>
         </li>
 
-        <li class="treeview">
-            <a href="{{route('skkaperpo')}}">
+        <li class="active treeview">
+            <a href="{{route('identitas_auditor')}}">
                 <i class="fa fa-files-o"></i>
-                <span>SKKA per Kegiatan Audit</span>
+                <span>Penerimaan BBM</span>
             </a>
-        </li>
-
-        <li class="treeview">
-            <a href="{{route('skkapersmt')}}">
-                <i class="fa fa-files-o"></i>
-                <span>SKKA per Semester</span>
-            </a>
+            
         </li>
     </ul>
     </section>
