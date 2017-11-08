@@ -52,13 +52,13 @@
                       <div class="navbar-inner">
                           <ul class="nav nav-pills">
                               <li class="active">
-                                  <a data-toggle="tab" href="#tab1"><i class="fa fa-calendar"></i> Identitas</a>
+                                  <a data-toggle="tab" href="#tab1"><i class="fa fa-user"></i> Identitas</a>
                               </li>
                               <li>
-                                  <a data-toggle="tab" href="#tab2"><i class="fa fa-car"></i> Penerimaan BBM</a>
+                                  <a data-toggle="tab" href="#tab2"><i class="fa fa-tint"></i> Penerimaan BBM</a>
                               </li>
                               <li>
-                                  <a data-toggle="tab" href="#tab3"><i class="fa fa-user"></i> Kalibrasi Sebelum</a>
+                                  <a data-toggle="tab" href="#tab3"><i class="fa fa-align-left"></i> Kalibrasi Sebelum</a>
                               </li>
                               <li>
                                   <a data-toggle="tab" href="#tab4"><i class="fa fa-edit"></i> Matematis Sesudah</a>
@@ -225,7 +225,7 @@
                             </div>
                             <div class="form-group">                                
                                 <div class="col-md-10">
-                                    <label>Hasil Pengukuran Sounding Tangki B Sebelum Pengisisan BBM dari Transportir (dalam satuan meter) (input)</label>
+                                    <label>Hasil Pengukuran Sounding Tangki B Sebelum Pengisisan BBM dari Transportir (dalam satuan meter)</label>
                                 </div>
                                 <div class="col-md-4">
                                     {!! Form::text('tb_sblm', null, ['class' => 'form-control']) !!}
@@ -233,7 +233,7 @@
                             </div>   
                             <div class="form-group">                                
                                 <div class="col-md-10">
-                                    <label>Hasil Pengukuran Sounding Tangki C Sebelum Pengisisan BBM dari Transportir (dalam satuan meter) (input)</label>
+                                    <label>Hasil Pengukuran Sounding Tangki C Sebelum Pengisisan BBM dari Transportir (dalam satuan meter)</label>
                                 </div>
                                 <div class="col-md-4">
                                     {!! Form::text('tc_sblm', null, ['class' => 'form-control']) !!}
@@ -249,44 +249,132 @@
                                 </a>
                             </div>
                         </div>
+                        <!-- end of tab3 -->
 
                         <div id="tab4" class="tab-pane">
                         <label class="control-label" for="sopbbm">Menentukan Volume BBM Menggunakan Rumus Matematis Sebelum Pengisian BBM dari Transportir</label>
                             <ul>                                
                                 <div class="form-group">
                                     <li>
-                                        <label>Menentukan Volume BBM Tangki A Menggunakan Rumus Matematis Sebelum Pengisisan BBM dari Transportir</label>                                                                                        
+                                        <label>Menentukan Volume BBM Tangki A Menggunakan Rumus Matematis Sebelum Pengisisan BBM dari Transportir</label>
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Jenis Tangki', ['class' => 'control-label']) !!}
+                                            </br>{!! Form::select('jenistangki', [
+                                                '' => '--',
+                                                'Tabung' => 'Tabung',
+                                                'Balok' => 'Balok',
+
+                                            ], null, ['class' => 'form-control select2']) !!}                                            
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Jari-jari Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Tinggi Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Panjang Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Lebar Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Tinggi Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
                                     </li>
-                                    {!! Form::label('jenistangki', 'Jenis Tangki', ['class' => 'control-label']) !!}
-                                    {!! Form::select('jenistangki', [
-                                        '' => '--',
-                                        'Semester 1' => 'Semester 1',
-                                        'Semester 2' => 'Semester 2',
-
-                                    ], null, ['class' => 'form-control select2']) !!}
-                                </div>
-
-                                <div class="form-group">
-                                    
                                 </div>
 
                                 <div class="form-group">
                                     <li>
                                         <label>Menentukan Volume BBM Tangki B Menggunakan Rumus Matematis Sebelum Pengisisan BBM dari Transportir</label>
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Jenis Tangki', ['class' => 'control-label']) !!}
+                                            </br>{!! Form::select('jenistangki', [
+                                                '' => '--',
+                                                'Tabung' => 'Tabung',
+                                                'Balok' => 'Balok',
 
+                                            ], null, ['class' => 'form-control select2']) !!}                                            
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Jari-jari Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Tinggi Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Panjang Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Lebar Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Tinggi Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
                                     </li>                                
                                 </div>   
 
                                 <div class="form-group"> 
                                     <li>
                                         <label>Menentukan Volume BBM Tangki C Menggunakan Rumus Matematis Sebelum Pengisisan BBM dari Transportir</label>
-                                            
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Jenis Tangki', ['class' => 'control-label']) !!}
+                                            </br>{!! Form::select('jenistangki', [
+                                                '' => '--',
+                                                'Tabung' => 'Tabung',
+                                                'Balok' => 'Balok',
+
+                                            ], null, ['class' => 'form-control select2']) !!}                                            
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Jari-jari Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Tinggi Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Panjang Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Lebar Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Tinggi Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
                                     </li>
                                 </div>
                             </ul>
                             
-                                         
-
                             <div class="btn-group" role="group" style="float: right;">
                                 <a data-toggle="tab" href="#tab3" data-trigger="tab">
                                    <button type="button" align="right" class="btn btn-info btn-md mundur">Kembali</button>
@@ -296,6 +384,333 @@
                                 </a>
                             </div>
                         </div>
+                        <!-- end of tab4 -->
+
+                        <div id="tab5" class="tab-pane">
+                        <label class="control-label" for="sopbbm">Konversi ke Litre Standard Sebelum Pengisian BBM dari Transportir</label>
+                            <div class="form-group">                                
+                                <div class="col-md-10">
+                                    <label>Litre Observed (dalam satuan Liter)</label>
+                                </div>
+                                <div class="col-md-4">
+                                    {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}
+                                </div>
+                            </div>
+                            <div class="form-group">                                
+                                <div class="col-md-10">
+                                    <label>Suhu (dalam satuan derajat Celcius)</label>
+                                </div>
+                                <div class="col-md-4">
+                                    {!! Form::text('tb_sblm', null, ['class' => 'form-control']) !!}
+                                </div>
+                            </div>           
+
+                            <div class="btn-group" role="group" style="float: right;">
+                                <a data-toggle="tab" href="#tab4" data-trigger="tab">
+                                   <button type="button" align="right" class="btn btn-info btn-md mundur">Kembali</button>
+                                </a>
+                                <a data-toggle="tab" href="#tab6" data-trigger="tab">
+                                   <button type="button" align="right" class="btn btn-primary btn-md maju">Lanjut</button>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end of tab5 -->
+
+                        <div id="tab6" class="tab-pane">
+                        <label class="control-label" for="sopbbm">Menentukan Volume BBM Menggunakan Tabel Kalibrasi Setelah Pengisian BBM dari Transportir</label>
+                            <div class="form-group">                                
+                                <div class="col-md-10">
+                                    <label>Hasil Pengukuran Sounding Tangki A Setelah Pengisisan BBM dari Transportir (dalam satuan meter)</label>
+                                </div>
+                                <div class="col-md-4">
+                                    {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}
+                                </div>
+                            </div>
+                            <div class="form-group">                                
+                                <div class="col-md-10">
+                                    <label>Hasil Pengukuran Sounding Tangki B Setelah Pengisisan BBM dari Transportir (dalam satuan meter)</label>
+                                </div>
+                                <div class="col-md-4">
+                                    {!! Form::text('tb_sblm', null, ['class' => 'form-control']) !!}
+                                </div>
+                            </div>   
+                            <div class="form-group">                                
+                                <div class="col-md-10">
+                                    <label>Hasil Pengukuran Sounding Tangki C Setelah Pengisisan BBM dari Transportir (dalam satuan meter)</label>
+                                </div>
+                                <div class="col-md-4">
+                                    {!! Form::text('tc_sblm', null, ['class' => 'form-control']) !!}
+                                </div>
+                            </div>           
+
+                            <div class="btn-group" role="group" style="float: right;">
+                                <a data-toggle="tab" href="#tab5" data-trigger="tab">
+                                   <button type="button" align="right" class="btn btn-info btn-md mundur">Kembali</button>
+                                </a>
+                                <a data-toggle="tab" href="#tab7" data-trigger="tab">
+                                   <button type="button" align="right" class="btn btn-primary btn-md maju">Lanjut</button>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end of tab6 -->
+
+                        <div id="tab7" class="tab-pane">
+                        <label class="control-label" for="sopbbm">Menentukan Volume BBM Menggunakan Rumus Matematis Setelah Pengisian BBM dari Transportir</label>
+                            <ul>                                
+                                <div class="form-group">
+                                    <li>
+                                        <label>Menentukan Volume BBM Tangki A Menggunakan Rumus Matematis Setelah Pengisisan BBM dari Transportir</label>
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Jenis Tangki', ['class' => 'control-label']) !!}
+                                            </br>{!! Form::select('jenistangki', [
+                                                '' => '--',
+                                                'Tabung' => 'Tabung',
+                                                'Balok' => 'Balok',
+
+                                            ], null, ['class' => 'form-control select2']) !!}                                            
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Jari-jari Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Tinggi Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Panjang Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Lebar Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Tinggi Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
+                                    </li>
+                                </div>
+
+                                <div class="form-group">
+                                    <li>
+                                        <label>Menentukan Volume BBM Tangki B Menggunakan Rumus Matematis Setelah Pengisisan BBM dari Transportir</label>
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Jenis Tangki', ['class' => 'control-label']) !!}
+                                            </br>{!! Form::select('jenistangki', [
+                                                '' => '--',
+                                                'Tabung' => 'Tabung',
+                                                'Balok' => 'Balok',
+
+                                            ], null, ['class' => 'form-control select2']) !!}                                            
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Jari-jari Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Tinggi Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Panjang Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Lebar Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Tinggi Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
+                                    </li>                                
+                                </div>   
+
+                                <div class="form-group"> 
+                                    <li>
+                                        <label>Menentukan Volume BBM Tangki C Menggunakan Rumus Matematis Setelah Pengisisan BBM dari Transportir</label>
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Jenis Tangki', ['class' => 'control-label']) !!}
+                                            </br>{!! Form::select('jenistangki', [
+                                                '' => '--',
+                                                'Tabung' => 'Tabung',
+                                                'Balok' => 'Balok',
+
+                                            ], null, ['class' => 'form-control select2']) !!}                                            
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Jari-jari Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Tinggi Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Panjang Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Lebar Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
+
+                                        <div class="form-group">
+                                            {!! Form::label('jenistangki', 'Tinggi Tangki', ['class' => 'control-label']) !!}
+                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}                                        
+                                        </div>
+                                    </li>
+                                </div>
+                            </ul>
+                            
+                            <div class="btn-group" role="group" style="float: right;">
+                                <a data-toggle="tab" href="#tab6" data-trigger="tab">
+                                   <button type="button" align="right" class="btn btn-info btn-md mundur">Kembali</button>
+                                </a>
+                                <a data-toggle="tab" href="#tab8" data-trigger="tab">
+                                   <button type="button" align="right" class="btn btn-primary btn-md maju">Lanjut</button>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end of tab7 -->
+
+                        <div id="tab8" class="tab-pane">
+                        <label class="control-label" for="sopbbm">Konversi ke Litre Standard Setelah Pengisian BBM dari Transportir</label>
+                            <div class="form-group">                                
+                                <div class="col-md-10">
+                                    <label>Litre Observed (dalam satuan Liter)</label>
+                                </div>
+                                <div class="col-md-4">
+                                    {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}
+                                </div>
+                            </div>
+                            <div class="form-group">                                
+                                <div class="col-md-10">
+                                    <label>Suhu (dalam satuan derajat Celcius)</label>
+                                </div>
+                                <div class="col-md-4">
+                                    {!! Form::text('tb_sblm', null, ['class' => 'form-control']) !!}
+                                </div>
+                            </div>           
+
+                            <div class="btn-group" role="group" style="float: right;">
+                                <a data-toggle="tab" href="#tab7" data-trigger="tab">
+                                   <button type="button" align="right" class="btn btn-info btn-md mundur">Kembali</button>
+                                </a>
+                                <a data-toggle="tab" href="#tab9" data-trigger="tab">
+                                   <button type="button" align="right" class="btn btn-primary btn-md maju">Lanjut</button>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end of tab8 -->
+
+                        <div id="tab9" class="tab-pane">
+                        <label class="control-label" for="sopbbm">Lain-lain</label>
+                            <div class="form-group">                                
+                                <div class="col-md-10">
+                                    <label>Nomor DO</label>
+                                </div>
+                                <div class="col-md-4">
+                                    {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}
+                                </div>
+                            </div>
+                            <div class="form-group">                                
+                                <div class="col-md-10">
+                                    <label>Kuantitas</label>
+                                </div>
+                                <div class="col-md-4">
+                                    {!! Form::text('tb_sblm', null, ['class' => 'form-control']) !!}
+                                </div>
+                            </div>
+
+                            <div class="form-group">                                
+                                <div class="col-md-10">
+                                    <label>Tanggal, Bulan, dan Tahun Periksa</label>
+                                </div>
+                                <div class="col-md-4">
+                                    {!! Form::date('tb_sblm', null, ['class' => 'form-control']) !!}
+                                </div>
+                            </div>           
+
+                            <div class="form-group">                                
+                                <div class="col-md-10">
+                                    <label>Tanggal, Bulan, dan Tahun Laporan</label>
+                                </div>
+                                <div class="col-md-4">
+                                    {!! Form::date('tb_sblm', null, ['class' => 'form-control']) !!}
+                                </div>
+                            </div>
+
+                            <div class="form-group">                                
+                                <div class="col-md-10">
+                                    <label>Lokasi Periksa</label>
+                                </div>
+                                <div class="col-md-4">
+                                    {!! Form::text('tb_sblm', null, ['class' => 'form-control']) !!}
+                                </div>
+                            </div>
+
+                            <div class="btn-group" role="group" style="float: right;">
+                                <a data-toggle="tab" href="#tab8" data-trigger="tab">
+                                   <button type="button" align="right" class="btn btn-info btn-md mundur">Kembali</button>
+                                </a>
+                                <a data-toggle="tab" href="#tab10" data-trigger="tab">
+                                   <button type="button" align="right" class="btn btn-primary btn-md maju">Lanjut</button>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end of tab9 -->
+
+                        <div id="tab10" class="tab-pane">
+                        <label class="control-label" for="sopbbm">Lain-lain</label>
+                            <div class="form-group">                                
+                                <div class="col-md-10">
+                                    <label>Tabel Kalibrasi</label>
+                                </div>
+                                <div class="col-md-4">
+                                    {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}
+                                </div>
+                            </div>
+                            <div class="form-group">                                
+                                <div class="col-md-10">
+                                    <label>Alat Ukur Terkalibrasi</label>
+                                </div>
+                                <div class="col-md-4">
+                                    {!! Form::text('tb_sblm', null, ['class' => 'form-control']) !!}
+                                </div>
+                            </div>
+
+                            <div class="form-group">                                
+                                <div class="col-md-10">
+                                    <label>Surveyor</label>
+                                </div>
+                                <div class="col-md-4">
+                                    {!! Form::text('tb_sblm', null, ['class' => 'form-control']) !!}
+                                </div>
+                            </div>                                       
+
+                            <div class="btn-group" role="group" style="float: right;">
+                                <a data-toggle="tab" href="#tab9" data-trigger="tab">
+                                   <button type="button" align="right" class="btn btn-info btn-md mundur">Kembali</button>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- end of tab10 -->
 
                     </div>
                     <!-- end of tab-content -->
