@@ -13,7 +13,7 @@
             </a>
         </li>
 
-        <li class="active treeview">
+        <li class="treeview">
             <a href="{{route('identitas_auditor')}}">
                 <i class="fa fa-files-o"></i>
                 <span>Penerimaan BBM</span>
