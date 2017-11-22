@@ -212,7 +212,7 @@
 
                             <div class="btn-group" role="group" style="float: right;">
                                 <a data-toggle="tab" href="#tab1" data-trigger="tab">
-                                   <button type="button" align="right" class="btn btn-info btn-md mundur">Kembali</button>
+                                   <button type="button" align="right" class="btn btn-warning btn-md mundur">Kembali</button>
                                 </a>
                                 <a data-toggle="tab" href="#tab3" data-trigger="tab">
                                    <button type="button" align="right" class="btn btn-primary btn-md maju">Lanjut</button>
@@ -226,59 +226,31 @@
 
                             <div class="form-group">
                                 <table class="table table-hover">
-                                    <tbody>
-
-                                    <tr>
-                                    <div class="form-group">
-                                        <th align="center">
-                                        <div class="col-md-10">
-                                            <label>Hasil Pengukuran <em>Sounding</em> Tangki A Sebelum Pengisisan BBM dari Transportir (liter)</label>
-                                        </div>
-                                        </th>
-                                        <th align="center">
-                                        <div class="col-md-4">
-                                            {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}
-                                        </div>
-                                        </th>
-                                    </div>
-                                    </tr>
-
-                                    <tr>
-                                    <div class="form-group">
-                                        <th align="center">
-                                        <div class="col-md-10">
-                                            <label>Hasil Pengukuran <em>Sounding</em> Tangki B Sebelum Pengisisan BBM dari Transportir (liter)</label>
-                                        </div>
-                                        </th>
-                                        <th align="center">
-                                        <div class="col-md-4">
-                                            {!! Form::text('tb_sblm', null, ['class' => 'form-control']) !!}
-                                        </div>
-                                        </th>
-                                    </div>
-                                    </tr>
-
-                                    <tr>
-                                    <div class="form-group">
-                                        <th align="center">
-                                        <div class="col-md-10">
-                                            <label>Hasil Pengukuran <em>Sounding</em> Tangki C Sebelum Pengisisan BBM dari Transportir (liter)</label>
-                                        </div>
-                                        </th>
-                                        <th align="center">
-                                        <div class="col-md-4">
-                                            {!! Form::text('tc_sblm', null, ['class' => 'form-control']) !!}
-                                        </div>
-                                        </th>
-                                    </div>
-                                    </tr>
+                                    <tbody id="isi-table-kalib-sblm">
+                                        <tr>
+                                            <th align="center">
+                                            <div class="col-md-10">
+                                                <label>Hasil Pengukuran <em>Sounding</em> Tangki A Sebelum Pengisisan BBM dari Transportir (liter)</label>
+                                            </div>
+                                            </th>
+                                            <th align="center">
+                                            <div class="col-md-4">
+                                                {!! Form::text('kalib_sblm[0]', null, ['class' => 'form-control']) !!}
+                                            </div>
+                                            </th>
+                                        </tr>                                    
                                     </tbody>
                                 </table>
+                                <div class="form-group">
+                                    <th align="center">
+                                        <button type="button" align="right" class="btn btn-success" onclick="tambah_kalib_sblm()">Tambah</button>
+                                    </th>                                        
+                                </div>
                             </div>
 
                             <div class="btn-group" role="group" style="float: right;">
                                 <a data-toggle="tab" href="#tab2" data-trigger="tab">
-                                   <button type="button" align="right" class="btn btn-info btn-md mundur">Kembali</button>
+                                   <button type="button" align="right" class="btn btn-warning btn-md mundur">Kembali</button>
                                 </a>
                                 <a data-toggle="tab" href="#tab4" data-trigger="tab">
                                    <button type="button" align="right" class="btn btn-primary btn-md maju">Lanjut</button>
@@ -292,16 +264,12 @@
                             <div class="form-group">
                                 <table class="table table-hover">
                                     <tbody>
-
                                     <tr>
                                         <div class="form-group">
-
                                             <th align="center">
-                                                <li>
                                                 <div class="col-md-10">
                                                     <label>Menentukan Volume BBM Tangki A Menggunakan Rumus Matematis Sebelum Pengisisan BBM dari Transportir</label>
                                                 </div>
-                                                </li>
                                             </th>
 
                                             <th align="center">
@@ -319,13 +287,10 @@
 
                                     <tr>
                                         <div class="form-group">
-
                                             <th align="center">
-                                                <li>
                                                     <div class="col-md-10">
                                                         <label>Menentukan Volume BBM Tangki B Menggunakan Rumus Matematis Sebelum Pengisisan BBM dari Transportir</label>
                                                     </div>
-                                                </li>
                                             </th>
 
                                             <th align="center">
@@ -343,13 +308,10 @@
 
                                     <tr>
                                         <div class="form-group">
-
                                             <th align="center">
-                                                <li>
                                                     <div class="col-md-10">
                                                         <label>Menentukan Volume BBM Tangki C Menggunakan Rumus Matematis Sebelum Pengisisan BBM dari Transportir</label>
                                                     </div>
-                                                </li>
                                             </th>
 
                                             <th align="center">
@@ -372,7 +334,7 @@
 
                             <div class="btn-group" role="group" style="float: right;">
                                 <a data-toggle="tab" href="#tab3" data-trigger="tab">
-                                   <button type="button" align="right" class="btn btn-info btn-md mundur">Kembali</button>
+                                   <button type="button" align="right" class="btn btn-warning btn-md mundur">Kembali</button>
                                 </a>
                                 <a data-toggle="tab" href="#tab5" data-trigger="tab">
                                    <button type="button" align="right" class="btn btn-primary btn-md maju">Lanjut</button>
@@ -386,89 +348,41 @@
 
                                 <div class="form-group">
                                     <table class="table table-hover">
-                                        <tbody>
-
-                                        <tr>
-                                            <div class="form-group">
-                                                <th align="center">
-                                                    <div class="col-md-10">
-                                                        <label><em>Litre Observed</em> Tangki A Sebelum Pengisian BBM (liter)</label>
-                                                    </div>
-                                                </th>
-                                                <th align="center">
-                                                    <div class="col-md-4">
-                                                        {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}
-                                                    </div>
-                                                <th align="center">
-                                                    <div class="col-md-10">
-                                                        <label><em>Suhu</em> Tangki A Sebelum Pengisian BBM (°C)</label>
-                                                    </div>
-                                                </th>
-                                                <th align="center">
-                                                    <div class="col-md-4">
-                                                        {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}
-                                                    </div>
-                                                </th>
-                                                </th>
-                                            </div>
-                                        </tr>
-
-                                        <tr>
-                                            <div class="form-group">
-                                                <th align="center">
-                                                    <div class="col-md-10">
-                                                        <label><em>Litre Observed</em> Tangki B Sebelum Pengisian BBM (liter)</label>
-                                                    </div>
-                                                </th>
-                                                <th align="center">
-                                                    <div class="col-md-4">
-                                                        {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}
-                                                    </div>
-                                                <th align="center">
-                                                    <div class="col-md-10">
-                                                        <label><em>Suhu</em> Tangki B Sebelum Pengisian BBM (°C)</label>
-                                                    </div>
-                                                </th>
-                                                <th align="center">
-                                                    <div class="col-md-4">
-                                                        {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}
-                                                    </div>
-                                                </th>
-                                                </th>
-                                            </div>
-                                        </tr>
-
-                                        <tr>
-                                            <div class="form-group">
-                                                <th align="center">
-                                                    <div class="col-md-10">
-                                                        <label><em>Litre Observed</em> Tangki C Sebelum Pengisian BBM (liter)</label>
-                                                    </div>
-                                                </th>
-                                                <th align="center">
-                                                    <div class="col-md-4">
-                                                        {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}
-                                                    </div>
-                                                <th align="center">
-                                                    <div class="col-md-10">
-                                                        <label><em>Suhu</em> Tangki C Sebelum Pengisian BBM (°C)</label>
-                                                    </div>
-                                                </th>
-                                                <th align="center">
-                                                    <div class="col-md-4">
-                                                        {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}
-                                                    </div>
-                                                </th>
-                                                </th>
-                                            </div>
-                                        </tr>
+                                        <tbody id="isi-table-litre-sblm">
+                                            <tr>
+                                                    <th align="center">
+                                                        <div class="col-md-10">
+                                                            <label><em>Litre Observed</em> Tangki A Sebelum Pengisian BBM (liter)</label>
+                                                        </div>
+                                                    </th>
+                                                    <th align="center">
+                                                        <div class="col-md-4">
+                                                            {!! Form::text('vol_litre_sblm[0]', null, ['class' => 'form-control']) !!}
+                                                        </div>
+                                                    <th align="center">
+                                                        <div class="col-md-10">
+                                                            <label><em>Suhu</em> Tangki A Sebelum Pengisian BBM (°C)</label>
+                                                        </div>
+                                                    </th>
+                                                    <th align="center">
+                                                        <div class="col-md-4">
+                                                            {!! Form::text('suhu_litre_sblm[0]', null, ['class' => 'form-control']) !!}
+                                                        </div>
+                                                    </th>
+                                                    </th>
+                                            </tr>                                        
                                         </tbody>
                                     </table>
+                                    <div class="form-group">
+                                        <th align="center">
+                                            <button type="button" align="right" class="btn btn-success" onclick="tambah_litre_sblm()">Tambah</button>
+                                        </th>                                        
+                                    </div>
                                 </div>
 
                                 <div class="btn-group" role="group" style="float: right;">
                                     <a data-toggle="tab" href="#tab4" data-trigger="tab">
-                                        <button type="button" align="right" class="btn btn-info btn-md mundur">Kembali</button>
+                                        <button type="button" align="right" class="btn btn-warning btn-md mundur">Kembali</button>
                                     </a>
                                     <a data-toggle="tab" href="#tab6" data-trigger="tab">
                                         <button type="button" align="right" class="btn btn-primary btn-md maju">Lanjut</button>
@@ -482,59 +396,31 @@
 
                                 <div class="form-group">
                                     <table class="table table-hover">
-                                        <tbody>
-
-                                        <tr>
-                                            <div class="form-group">
+                                        <tbody id="isi-table-kalib-stlh">
+                                            <tr>
                                                 <th align="center">
-                                                    <div class="col-md-10">
-                                                        <label>Hasil Pengukuran <em>Sounding</em> Tangki A Setelah Pengisisan BBM dari Transportir (liter)</label>
-                                                    </div>
+                                                <div class="col-md-10">
+                                                    <label>Hasil Pengukuran <em>Sounding</em> Tangki A Setelah Pengisisan BBM dari Transportir (liter)</label>
+                                                </div>
                                                 </th>
                                                 <th align="center">
-                                                    <div class="col-md-4">
-                                                        {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}
-                                                    </div>
+                                                <div class="col-md-4">
+                                                    {!! Form::text('kalib_stlh[0]', null, ['class' => 'form-control']) !!}
+                                                </div>
                                                 </th>
-                                            </div>
-                                        </tr>
-
-                                        <tr>
-                                            <div class="form-group">
-                                                <th align="center">
-                                                    <div class="col-md-10">
-                                                        <label>Hasil Pengukuran <em>Sounding</em> Tangki B Setelah Pengisisan BBM dari Transportir (liter)</label>
-                                                    </div>
-                                                </th>
-                                                <th align="center">
-                                                    <div class="col-md-4">
-                                                        {!! Form::text('tb_sblm', null, ['class' => 'form-control']) !!}
-                                                    </div>
-                                                </th>
-                                            </div>
-                                        </tr>
-
-                                        <tr>
-                                            <div class="form-group">
-                                                <th align="center">
-                                                    <div class="col-md-10">
-                                                        <label>Hasil Pengukuran <em>Sounding</em> Tangki C Setelah Pengisisan BBM dari Transportir (liter)</label>
-                                                    </div>
-                                                </th>
-                                                <th align="center">
-                                                    <div class="col-md-4">
-                                                        {!! Form::text('tc_sblm', null, ['class' => 'form-control']) !!}
-                                                    </div>
-                                                </th>
-                                            </div>
-                                        </tr>
+                                            </tr>                                    
                                         </tbody>
                                     </table>
+                                    <div class="form-group">
+                                        <th align="center">
+                                            <button type="button" align="right" class="btn btn-success" onclick="tambah_kalib_stlh()">Tambah</button>
+                                        </th>                                        
+                                    </div>
                                 </div>
 
                                 <div class="btn-group" role="group" style="float: right;">
                                     <a data-toggle="tab" href="#tab5" data-trigger="tab">
-                                        <button type="button" align="right" class="btn btn-info btn-md mundur">Kembali</button>
+                                        <button type="button" align="right" class="btn btn-warning btn-md mundur">Kembali</button>
                                     </a>
                                     <a data-toggle="tab" href="#tab7" data-trigger="tab">
                                         <button type="button" align="right" class="btn btn-primary btn-md maju">Lanjut</button>
@@ -632,7 +518,7 @@
 
                                 <div class="btn-group" role="group" style="float: right;">
                                     <a data-toggle="tab" href="#tab6" data-trigger="tab">
-                                        <button type="button" align="right" class="btn btn-info btn-md mundur">Kembali</button>
+                                        <button type="button" align="right" class="btn btn-warning btn-md mundur">Kembali</button>
                                     </a>
                                     <a data-toggle="tab" href="#tab8" data-trigger="tab">
                                         <button type="button" align="right" class="btn btn-primary btn-md maju">Lanjut</button>
@@ -645,89 +531,41 @@
 
                                 <div class="form-group">
                                     <table class="table table-hover">
-                                        <tbody>
-
-                                        <tr>
-                                            <div class="form-group">
-                                                <th align="center">
-                                                    <div class="col-md-10">
-                                                        <label><em>Litre Observed</em> Tangki A Setelah Pengisian BBM (liter)</label>
-                                                    </div>
-                                                </th>
-                                                <th align="center">
-                                                    <div class="col-md-4">
-                                                        {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}
-                                                    </div>
-                                                <th align="center">
-                                                    <div class="col-md-10">
-                                                        <label><em>Suhu</em> Tangki A Setelah Pengisian BBM (°C)</label>
-                                                    </div>
-                                                </th>
-                                                <th align="center">
-                                                    <div class="col-md-4">
-                                                        {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}
-                                                    </div>
-                                                </th>
-                                                </th>
-                                            </div>
-                                        </tr>
-
-                                        <tr>
-                                            <div class="form-group">
-                                                <th align="center">
-                                                    <div class="col-md-10">
-                                                        <label><em>Litre Observed</em> Tangki B Setelah Pengisian BBM (liter)</label>
-                                                    </div>
-                                                </th>
-                                                <th align="center">
-                                                    <div class="col-md-4">
-                                                        {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}
-                                                    </div>
-                                                <th align="center">
-                                                    <div class="col-md-10">
-                                                        <label><em>Suhu</em> Tangki B Setelah Pengisian BBM (°C)</label>
-                                                    </div>
-                                                </th>
-                                                <th align="center">
-                                                    <div class="col-md-4">
-                                                        {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}
-                                                    </div>
-                                                </th>
-                                                </th>
-                                            </div>
-                                        </tr>
-
-                                        <tr>
-                                            <div class="form-group">
-                                                <th align="center">
-                                                    <div class="col-md-10">
-                                                        <label><em>Litre Observed</em> Tangki C Setelah Pengisian BBM (liter)</label>
-                                                    </div>
-                                                </th>
-                                                <th align="center">
-                                                    <div class="col-md-4">
-                                                        {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}
-                                                    </div>
-                                                <th align="center">
-                                                    <div class="col-md-10">
-                                                        <label><em>Suhu</em> Tangki C Setelah Pengisian BBM (°C)</label>
-                                                    </div>
-                                                </th>
-                                                <th align="center">
-                                                    <div class="col-md-4">
-                                                        {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}
-                                                    </div>
-                                                </th>
-                                                </th>
-                                            </div>
-                                        </tr>
+                                        <tbody id="isi-table-litre-stlh">
+                                            <tr>
+                                                    <th align="center">
+                                                        <div class="col-md-10">
+                                                            <label><em>Litre Observed</em> Tangki A Setelah Pengisian BBM (liter)</label>
+                                                        </div>
+                                                    </th>
+                                                    <th align="center">
+                                                        <div class="col-md-4">
+                                                            {!! Form::text('vol_litre_stlh[0]', null, ['class' => 'form-control']) !!}
+                                                        </div>
+                                                    <th align="center">
+                                                        <div class="col-md-10">
+                                                            <label><em>Suhu</em> Tangki A Setelah Pengisian BBM (°C)</label>
+                                                        </div>
+                                                    </th>
+                                                    <th align="center">
+                                                        <div class="col-md-4">
+                                                            {!! Form::text('suhu_litre_stlh[0]', null, ['class' => 'form-control']) !!}
+                                                        </div>
+                                                    </th>
+                                                    </th>
+                                            </tr>                                        
                                         </tbody>
                                     </table>
+                                    <div class="form-group">
+                                        <th align="center">
+                                            <button type="button" align="right" class="btn btn-success" onclick="tambah_litre_stlh()">Tambah</button>
+                                        </th>                                        
+                                    </div>
                                 </div>
 
                                 <div class="btn-group" role="group" style="float: right;">
                                     <a data-toggle="tab" href="#tab7" data-trigger="tab">
-                                        <button type="button" align="right" class="btn btn-info btn-md mundur">Kembali</button>
+                                        <button type="button" align="right" class="btn btn-warning btn-md mundur">Kembali</button>
                                     </a>
                                     <a data-toggle="tab" href="#tab9" data-trigger="tab">
                                         <button type="button" align="right" class="btn btn-primary btn-md maju">Lanjut</button>
@@ -823,7 +661,7 @@
 
                                 <div class="btn-group" role="group" style="float: right;">
                                     <a data-toggle="tab" href="#tab8" data-trigger="tab">
-                                        <button type="button" align="right" class="btn btn-info btn-md mundur">Kembali</button>
+                                        <button type="button" align="right" class="btn btn-warning btn-md mundur">Kembali</button>
                                     </a>
                                     <a data-toggle="tab" href="#tab10" data-trigger="tab">
                                         <button type="button" align="right" class="btn btn-primary btn-md maju">Lanjut</button>
@@ -872,7 +710,7 @@
 
                                 <div class="btn-group" role="group" style="float: right;">
                                     <a data-toggle="tab" href="#tab9" data-trigger="tab">
-                                        <button type="button" align="right" class="btn btn-info btn-md mundur">Kembali</button>
+                                        <button type="button" align="right" class="btn btn-warning btn-md mundur">Kembali</button>
                                     </a>
                                     <a data-toggle="tab" href="#tab11" data-trigger="tab">
                                         <button type="button" align="right" class="btn btn-primary btn-md maju">Lanjut</button>

@@ -182,5 +182,128 @@
                 $('.nav-pills > .active').prev('li').find('a').trigger('click');
             });
 </script>
+
+<script type="text/javascript">
+    var kalib_sblm_ctr = 1;
+    var kalib_sblm_alph = 66;
+    function tambah_kalib_sblm(){
+        var isi_table = document.getElementById('isi-table-kalib-sblm');
+
+        var row = document.createElement('tr');
+
+        var th1 = document.createElement('th');
+        th1.setAttribute('align', 'center');
+        th1.innerHTML += '<div class="col-md-10"><label>Hasil Pengukuran <em>Sounding</em> Tangki '+ String.fromCharCode(kalib_sblm_alph) +' Sebelum Pengisisan BBM dari Transportir (liter)</label></div>';
+
+
+        var th2 = document.createElement('th');
+        th2.setAttribute('align', 'center');
+        th2.innerHTML += '<div class="col-md-4"><input class="form-control" name="kalib_sblm['+kalib_sblm_ctr+']" type="text"></div>';
+
+        isi_table.appendChild(row);
+        row.appendChild(th1);
+        row.appendChild(th2);
+
+        kalib_sblm_ctr++;
+        kalib_sblm_alph++;
+    }
+</script>
+
+<script type="text/javascript">
+    var kalib_stlh_ctr = 1;
+    var kalib_stlh_alph = 66;
+    function tambah_kalib_stlh(){
+        var isi_table = document.getElementById('isi-table-kalib-stlh');
+
+        var row = document.createElement('tr');
+
+        var th1 = document.createElement('th');
+        th1.setAttribute('align', 'center');
+        th1.innerHTML += '<div class="col-md-10"><label>Hasil Pengukuran <em>Sounding</em> Tangki '+ String.fromCharCode(kalib_stlh_alph) +' Setelah Pengisisan BBM dari Transportir (liter)</label></div>';
+
+
+        var th2 = document.createElement('th');
+        th2.setAttribute('align', 'center');
+        th2.innerHTML += '<div class="col-md-4"><input class="form-control" name="kalib_sblm['+kalib_stlh_ctr+']" type="text"></div>';
+
+        isi_table.appendChild(row);
+        row.appendChild(th1);
+        row.appendChild(th2);
+
+        kalib_stlh_ctr++;
+        kalib_stlh_alph++;
+    }
+</script>
+
+<script type="text/javascript">
+    var litre_sblm_ctr = 1;
+    var litre_sblm_alph = 66;
+    function tambah_litre_sblm(){
+        var isi_table = document.getElementById('isi-table-litre-sblm');
+
+        var row = document.createElement('tr');
+        row.innerHTML += '<th align="center">'+
+                                    '<div class="col-md-10">'+
+                                        '<label><em>Litre Observed</em> Tangki '+ String.fromCharCode(litre_sblm_alph) +' Sebelum Pengisian BBM (liter)</label>'+
+                                    '</div>'+
+                                '</th>'+
+                                '<th align="center">'+
+                                    '<div class="col-md-4">'+
+                                        '<input class="form-control" name="vol_litre_sblm['+litre_sblm_ctr+']" type="text">'+
+                                    '</div>'+
+                                '<th align="center">'+
+                                    '<div class="col-md-10">'+
+                                        '<label><em>Suhu</em> Tangki '+ String.fromCharCode(litre_sblm_alph) +' Sebelum Pengisian BBM (°C)</label>'+
+                                    '</div>'+
+                                '</th>'+
+                                '<th align="center">'+
+                                    '<div class="col-md-4">'+
+                                    '<input class="form-control" name="suhu_litre_sblm['+litre_sblm_ctr+']" type="text">'+
+                                    '</div>'+
+                                '</th>'+
+                            '</th>';
+
+        isi_table.appendChild(row);
+
+        litre_sblm_ctr++;
+        litre_sblm_alph++;
+    }
+</script>
+
+<script type="text/javascript">
+    var litre_stlh_ctr = 1;
+    var litre_stlh_alph = 66;
+    function tambah_litre_stlh(){
+        var isi_table = document.getElementById('isi-table-litre-stlh');
+
+        var row = document.createElement('tr');
+        row.innerHTML += '<th align="center">'+
+                                    '<div class="col-md-10">'+
+                                        '<label><em>Litre Observed</em> Tangki '+ String.fromCharCode(litre_stlh_alph) +' Sebelum Pengisian BBM (liter)</label>'+
+                                    '</div>'+
+                                '</th>'+
+                                '<th align="center">'+
+                                    '<div class="col-md-4">'+
+                                        '<input class="form-control" name="vol_litre_stlh['+litre_stlh_ctr+']" type="text">'+
+                                    '</div>'+
+                                '<th align="center">'+
+                                    '<div class="col-md-10">'+
+                                        '<label><em>Suhu</em> Tangki '+ String.fromCharCode(litre_stlh_alph) +' Sebelum Pengisian BBM (°C)</label>'+
+                                    '</div>'+
+                                '</th>'+
+                                '<th align="center">'+
+                                    '<div class="col-md-4">'+
+                                    '<input class="form-control" name="suhu_litre_stlh['+litre_stlh_ctr+']" type="text">'+
+                                    '</div>'+
+                                '</th>'+
+                            '</th>';
+
+        isi_table.appendChild(row);
+
+        litre_stlh_ctr++;
+        litre_stlh_alph++;
+    }
+</script>
+
 </body>
 </html>
