@@ -259,77 +259,16 @@
                         </div>
 
                         <div id="tab4" class="tab-pane">
-                        <h1><label class="control-label" for="sopbbm">Menentukan Volume BBM Menggunakan Rumus Matematis Sebelum Pengisian BBM dari Transportir</label></h1>
-
-                            <div class="form-group">
-                                <table class="table table-hover">
-                                    <tbody>
-                                    <tr>
-                                        <div class="form-group">
-                                            <th align="center">
-                                                <div class="col-md-10">
-                                                    <label>Menentukan Volume BBM Tangki A Menggunakan Rumus Matematis Sebelum Pengisisan BBM dari Transportir</label>
-                                                </div>
-                                            </th>
-
-                                            <th align="center">
-                                                <div class="col-md-10">
-                                                {!! Form::label('bentuktangki', 'Bentuk Tangki', ['class' => 'control-label']) !!}
-                                                {!! Form::select('bentuktangki', [
-                                                    '' => '--',
-                                                    'Tabung' => 'Tabung',
-                                                    'Balok' => 'Balok',
-                                                ], null, ['class' => 'form-control select2']) !!}
-                                                </div>
-                                            </th>
-                                        </div>
-                                    </tr>
-
-                                    <tr>
-                                        <div class="form-group">
-                                            <th align="center">
-                                                    <div class="col-md-10">
-                                                        <label>Menentukan Volume BBM Tangki B Menggunakan Rumus Matematis Sebelum Pengisisan BBM dari Transportir</label>
-                                                    </div>
-                                            </th>
-
-                                            <th align="center">
-                                                <div class="col-md-10">
-                                                    {!! Form::label('bentuktangki', 'Bentuk Tangki', ['class' => 'control-label']) !!}
-                                                    {!! Form::select('bentuktangki', [
-                                                        '' => '--',
-                                                        'Tabung' => 'Tabung',
-                                                        'Balok' => 'Balok',
-                                                    ], null, ['class' => 'form-control select2']) !!}
-                                                </div>
-                                            </th>
-                                        </div>
-                                    </tr>
-
-                                    <tr>
-                                        <div class="form-group">
-                                            <th align="center">
-                                                    <div class="col-md-10">
-                                                        <label>Menentukan Volume BBM Tangki C Menggunakan Rumus Matematis Sebelum Pengisisan BBM dari Transportir</label>
-                                                    </div>
-                                            </th>
-
-                                            <th align="center">
-                                                <div class="col-md-10">
-                                                    {!! Form::label('bentuktangki', 'Bentuk Tangki', ['class' => 'control-label']) !!}
-                                                    {!! Form::select('bentuktangki', [
-                                                        '' => '--',
-                                                        'Tabung' => 'Tabung',
-                                                        'Balok' => 'Balok',
-                                                    ], null, ['class' => 'form-control select2']) !!}
-                                                </div>
-                                            </th>
-                                        </div>
-                                    </tr>
-
-
-                                    </tbody>
+                        <h1><label class="control-label" for="sopbbm">Menentukan Volume BBM Menggunakan Rumus Matematis Sebelum Pengisian BBM dari Transportir</label></h1>                            
+                            <div class="form-group">                            
+                                <table class="table table-hover" id="isi-table-mtm-sblm">
+                                                          
                                 </table>
+                                <div class="form-group">
+                                    <th align="center">
+                                        <button type="button" align="right" class="btn btn-success" onclick="tambah_mtm_sblm()">Tambah</button>
+                                    </th>                                        
+                                </div>
                             </div>
 
                             <div class="btn-group" role="group" style="float: right;">
@@ -434,86 +373,14 @@
                                 <h1><label class="control-label" for="sopbbm">Menentukan Volume BBM Menggunakan Rumus Matematis Setelah Pengisian BBM dari Transportir</label></h1>
 
                                 <div class="form-group">
-                                    <table class="table table-hover">
-                                        <tbody>
-
-                                        <tr>
-                                            <div class="form-group">
-
-                                                <th align="center">
-                                                    <li>
-                                                        <div class="col-md-10">
-                                                            <label>Menentukan Volume BBM Tangki A Menggunakan Rumus Matematis Setelah Pengisisan BBM dari Transportir</label>
-                                                        </div>
-                                                    </li>
-                                                </th>
-
-                                                <th align="center">
-                                                    <div class="col-md-10">
-                                                        {!! Form::label('bentuktangki', 'Bentuk Tangki', ['class' => 'control-label']) !!}
-                                                        {!! Form::select('bentuktangki', [
-                                                            '' => '--',
-                                                            'Tabung' => 'Tabung',
-                                                            'Balok' => 'Balok',
-                                                        ], null, ['class' => 'form-control select2']) !!}
-                                                    </div>
-                                                </th>
-
-                                            </div>
-                                        </tr>
-
-                                        <tr>
-                                            <div class="form-group">
-
-                                                <th align="center">
-                                                    <li>
-                                                        <div class="col-md-10">
-                                                            <label>Menentukan Volume BBM Tangki B Menggunakan Rumus Matematis Setelah Pengisisan BBM dari Transportir</label>
-                                                        </div>
-                                                    </li>
-                                                </th>
-
-                                                <th align="center">
-                                                    <div class="col-md-10">
-                                                        {!! Form::label('bentuktangki', 'Bentuk Tangki', ['class' => 'control-label']) !!}
-                                                        {!! Form::select('bentuktangki', [
-                                                            '' => '--',
-                                                            'Tabung' => 'Tabung',
-                                                            'Balok' => 'Balok',
-                                                        ], null, ['class' => 'form-control select2']) !!}
-                                                    </div>
-                                                </th>
-
-                                            </div>
-                                        </tr>
-
-                                        <tr>
-                                            <div class="form-group">
-
-                                                <th align="center">
-                                                    <li>
-                                                        <div class="col-md-10">
-                                                            <label>Menentukan Volume BBM Tangki C Menggunakan Rumus Matematis Setelah Pengisisan BBM dari Transportir</label>
-                                                        </div>
-                                                    </li>
-                                                </th>
-
-                                                <th align="center">
-                                                    <div class="col-md-10">
-                                                        {!! Form::label('bentuktangki', 'Bentuk Tangki', ['class' => 'control-label']) !!}
-                                                        {!! Form::select('bentuktangki', [
-                                                            '' => '--',
-                                                            'Tabung' => 'Tabung',
-                                                            'Balok' => 'Balok',
-                                                        ], null, ['class' => 'form-control select2']) !!}
-                                                    </div>
-                                                </th>
-                                            </div>
-                                        </tr>
-
-
-                                        </tbody>
+                                    <table class="table table-hover" id="isi-table-mtm-stlh">
+                                                          
                                     </table>
+                                    <div class="form-group">
+                                        <th align="center">
+                                            <button type="button" align="right" class="btn btn-success" onclick="tambah_mtm_stlh()">Tambah</button>
+                                        </th>                                        
+                                    </div>
                                 </div>
 
                                 <div class="btn-group" role="group" style="float: right;">
