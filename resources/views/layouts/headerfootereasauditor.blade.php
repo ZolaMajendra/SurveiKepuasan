@@ -38,7 +38,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>-->
     <!--<![endif]-->
 </head>
-<body class="hold-transition skin-purple sidebar-mini">
+<body class="hold-transition skin-purple sidebar-mini" onload="multiload()">
 <div class="wrapper">
 
     <header class="main-header">
@@ -182,5 +182,379 @@
                 $('.nav-pills > .active').prev('li').find('a').trigger('click');
             });
 </script>
+
+<script type="text/javascript">
+    var kalib_sblm_ctr = 1;
+    var kalib_sblm_alph = 66;
+    function tambah_kalib_sblm(){
+        var isi_table = document.getElementById('isi-table-kalib-sblm');
+
+        var row = document.createElement('tr');
+
+        var th1 = document.createElement('th');
+        th1.setAttribute('align', 'center');
+        th1.innerHTML += '<div class="col-md-10"><label>Hasil Pengukuran <em>Sounding</em> Tangki '+ String.fromCharCode(kalib_sblm_alph) +' Sebelum Pengisisan BBM dari Transportir (liter)</label></div>';
+
+
+        var th2 = document.createElement('th');
+        th2.setAttribute('align', 'center');
+        th2.innerHTML += '<div class="col-md-4"><input class="form-control" name="kalib_sblm['+kalib_sblm_ctr+']" type="text"></div>';
+
+        isi_table.appendChild(row);
+        row.appendChild(th1);
+        row.appendChild(th2);
+
+        kalib_sblm_ctr++;
+        kalib_sblm_alph++;
+    }
+</script>
+
+<script type="text/javascript">
+    var kalib_stlh_ctr = 1;
+    var kalib_stlh_alph = 66;
+    function tambah_kalib_stlh(){
+        var isi_table = document.getElementById('isi-table-kalib-stlh');
+
+        var row = document.createElement('tr');
+
+        var th1 = document.createElement('th');
+        th1.setAttribute('align', 'center');
+        th1.innerHTML += '<div class="col-md-10"><label>Hasil Pengukuran <em>Sounding</em> Tangki '+ String.fromCharCode(kalib_stlh_alph) +' Setelah Pengisisan BBM dari Transportir (liter)</label></div>';
+
+
+        var th2 = document.createElement('th');
+        th2.setAttribute('align', 'center');
+        th2.innerHTML += '<div class="col-md-4"><input class="form-control" name="kalib_sblm['+kalib_stlh_ctr+']" type="text"></div>';
+
+        isi_table.appendChild(row);
+        row.appendChild(th1);
+        row.appendChild(th2);
+
+        kalib_stlh_ctr++;
+        kalib_stlh_alph++;
+    }
+</script>
+
+<script type="text/javascript">
+    var litre_sblm_ctr = 1;
+    var litre_sblm_alph = 66;
+    function tambah_litre_sblm(){
+        var isi_table = document.getElementById('isi-table-litre-sblm');
+
+        var row = document.createElement('tr');
+        row.innerHTML += '<th align="center">'+
+                                    '<div class="col-md-10">'+
+                                        '<label><em>Litre Observed</em> Tangki '+ String.fromCharCode(litre_sblm_alph) +' Sebelum Pengisian BBM (liter)</label>'+
+                                    '</div>'+
+                                '</th>'+
+                                '<th align="center">'+
+                                    '<div class="col-md-4">'+
+                                        '<input class="form-control" name="vol_litre_sblm['+litre_sblm_ctr+']" type="text">'+
+                                    '</div>'+
+                                '<th align="center">'+
+                                    '<div class="col-md-10">'+
+                                        '<label><em>Suhu</em> Tangki '+ String.fromCharCode(litre_sblm_alph) +' Sebelum Pengisian BBM (°C)</label>'+
+                                    '</div>'+
+                                '</th>'+
+                                '<th align="center">'+
+                                    '<div class="col-md-4">'+
+                                    '<input class="form-control" name="suhu_litre_sblm['+litre_sblm_ctr+']" type="text">'+
+                                    '</div>'+
+                                '</th>'+
+                            '</th>';
+
+        isi_table.appendChild(row);
+
+        litre_sblm_ctr++;
+        litre_sblm_alph++;
+    }
+</script>
+
+<script type="text/javascript">
+    var litre_stlh_ctr = 1;
+    var litre_stlh_alph = 66;
+    function tambah_litre_stlh(){
+        var isi_table = document.getElementById('isi-table-litre-stlh');
+
+        var row = document.createElement('tr');
+        row.innerHTML += '<th align="center">'+
+                                    '<div class="col-md-10">'+
+                                        '<label><em>Litre Observed</em> Tangki '+ String.fromCharCode(litre_stlh_alph) +' Sebelum Pengisian BBM (liter)</label>'+
+                                    '</div>'+
+                                '</th>'+
+                                '<th align="center">'+
+                                    '<div class="col-md-4">'+
+                                        '<input class="form-control" name="vol_litre_stlh['+litre_stlh_ctr+']" type="text">'+
+                                    '</div>'+
+                                '<th align="center">'+
+                                    '<div class="col-md-10">'+
+                                        '<label><em>Suhu</em> Tangki '+ String.fromCharCode(litre_stlh_alph) +' Sebelum Pengisian BBM (°C)</label>'+
+                                    '</div>'+
+                                '</th>'+
+                                '<th align="center">'+
+                                    '<div class="col-md-4">'+
+                                    '<input class="form-control" name="suhu_litre_stlh['+litre_stlh_ctr+']" type="text">'+
+                                    '</div>'+
+                                '</th>'+
+                            '</th>';
+
+        isi_table.appendChild(row);
+
+        litre_stlh_ctr++;
+        litre_stlh_alph++;
+    }
+</script>
+
+<script type="text/javascript">
+    function select_tangki_sblm(id_tangki){
+        
+        document.getElementById('var-balok-sblm-'+id_tangki).removeAttribute('hidden', '');
+        document.getElementById('var-tab-sblm-'+id_tangki).removeAttribute('hidden', '');
+
+        var bentuk_tangki = document.getElementById('bentuktangki-sblm-'+id_tangki).value;
+        if(bentuk_tangki == 'Tabung'){
+            document.getElementById('var-balok-sblm-'+id_tangki).setAttribute('hidden', '');
+        }else{
+            document.getElementById('var-tab-sblm-'+id_tangki).setAttribute('hidden', '');
+        }
+    }
+</script>
+
+<script type="text/javascript">
+    var mtm_sblm_ctr = 0;
+    var mtm_sblm_alph = 65;
+    
+    function tambah_mtm_sblm(){
+        var isi_table = document.getElementById('isi-table-mtm-sblm');        
+
+        isi_table.innerHTML += '<thead>'+
+                                    '<tr>'+
+                                        '<div class="form-group">'+
+                                            '<th align="center">'+
+                                                '<label class="control-label">'+(mtm_sblm_ctr+1) +'.</label>'+
+                                            '</th>'+
+                                            '<th align="center">'+
+                                                '<div class="col-md-10">'+
+                                                    '<label>Menentukan Volume BBM Tangki '+ String.fromCharCode(mtm_sblm_alph) +' Menggunakan Rumus Matematis Sebelum Pengisisan BBM dari Transportir</label>'+
+                                                '</div>'+
+                                            '</th>'+
+
+                                            '<th align="center">'+
+                                                '<div class="col-md-10">'+                                            
+                                                    '<label class="control-label" for="bentuktangki-sblm">Bentuk Tangki</label>'+
+                                                    '<select class="form-control" name="bentuktangki-sblm['+mtm_sblm_ctr+']" id="bentuktangki-sblm-'+mtm_sblm_ctr+'" onchange="select_tangki_sblm('+mtm_sblm_ctr+')">'+
+                                                        '<option value="--">--</option>'+
+                                                        '<option value="Tabung">Tabung</option>'+
+                                                        '<option value="Balok">Balok</option>'+
+                                                    '</select>'+
+                                                '</div>'+
+                                            '</th>'+
+                                        '</div>'+
+                                    '</tr>'+
+                                    '</thead>'+
+                                    '<tbody hidden id="var-balok-sblm-'+mtm_sblm_ctr+'">'+
+                                        '<tr>'+
+                                            '<td></td>'+
+                                            '<td>'+
+                                                '<div class="col-md-4">'+
+                                                    '<label class="control-label">Panjang </label>'+
+                                                '</div>'+
+                                            '</td>'+
+                                            '<td>'+
+                                                '<div class="col-md-4">'+
+                                                    '<input type="text" class="form-control" name="bal_pjg['+mtm_sblm_ctr+']">'+
+                                                '</div>'+
+                                            '</td>'+
+                                        '</tr>'+
+                                         '<tr>'+
+                                            '<td ></td>'+
+                                            '<td>'+
+                                                '<div class="col-md-4">'+
+                                                    '<label class="control-label">Lebar (meter)</label>'+
+                                                '</div>'+
+                                            '</td>'+
+                                            '<td>'+
+                                                '<div class="col-md-4">'+
+                                                    '<input type="text" class="form-control" name="bal_leb['+mtm_sblm_ctr+']">'+
+                                                '</div>'+
+                                            '</td>'+
+                                        '</tr>'+
+                                        '<tr>'+
+                                            '<td></td>'+
+                                            '<td>'+
+                                                '<div class="col-md-4">'+
+                                                    '<label class="control-label">Tinggi (meter)</label>'+
+                                                '</div>'+
+                                            '</td>'+
+                                            '<td>'+
+                                                '<div class="col-md-4">'+
+                                                    '<input type="text" class="form-control" name="bal_ting['+mtm_sblm_ctr+']">'+
+                                                '</div>'+
+                                            '</td>'+
+                                        '</tr>'+
+                                    '</tbody>'+
+
+                                    '<tbody hidden id="var-tab-sblm-'+mtm_sblm_ctr+'">'+                                    
+                                        '<tr>'+
+                                            '<td></td>'+
+                                            '<td>'+
+                                                '<div class="col-md-4">'+
+                                                    '<label class="control-label">Tinggi (meter)</label>'+
+                                                '</div>'+
+                                            '</td>'+
+                                            '<td>'+
+                                                '<div class="col-md-4">'+
+                                                    '<input type="text" class="form-control" name="tab_ting['+mtm_sblm_ctr+']">'+
+                                                '</div>'+
+                                            '</td>'+
+                                        '</tr>'+
+                                        '<tr>'+
+                                            '<td></td>'+
+                                            '<td>'+
+                                                '<div class="col-md-4">'+
+                                                    '<label class="control-label">Jari-jari (meter)</label>'+
+                                                '</div>'+
+                                            '</td>'+
+                                            '<td>'+
+                                                '<div class="col-md-4">'+
+                                                    '<input type="text" class="form-control" name="tab_jar['+mtm_sblm_ctr+']">'+
+                                                '</div>'+
+                                            '</td>'+
+                                        '</tr>'+
+                                    '</tbody>';
+        mtm_sblm_ctr++;
+        mtm_sblm_alph++;
+    }
+</script>
+
+<script type="text/javascript">
+    function select_tangki_stlh(id_tangki){
+        
+        document.getElementById('var-balok-stlh-'+id_tangki).removeAttribute('hidden', '');
+        document.getElementById('var-tab-stlh-'+id_tangki).removeAttribute('hidden', '');
+
+        var bentuk_tangki = document.getElementById('bentuktangki-stlh-'+id_tangki).value;
+        if(bentuk_tangki == 'Tabung'){
+            document.getElementById('var-balok-stlh-'+id_tangki).setAttribute('hidden', '');
+        }else{
+            document.getElementById('var-tab-stlh-'+id_tangki).setAttribute('hidden', '');
+        }
+    }
+</script>
+
+<script type="text/javascript">
+    var mtm_stlh_ctr = 0;
+    var mtm_stlh_alph = 65;
+    
+    function tambah_mtm_stlh(){
+        var isi_table = document.getElementById('isi-table-mtm-stlh');        
+
+        isi_table.innerHTML += '<thead>'+
+                                    '<tr>'+
+                                        '<div class="form-group">'+
+                                            '<th align="center">'+
+                                                '<label class="control-label">'+(mtm_stlh_ctr+1) +'.</label>'+
+                                            '</th>'+
+                                            '<th align="center">'+
+                                                '<div class="col-md-10">'+
+                                                    '<label>Menentukan Volume BBM Tangki '+ String.fromCharCode(mtm_stlh_alph) +' Menggunakan Rumus Matematis Setelah Pengisisan BBM dari Transportir</label>'+
+                                                '</div>'+
+                                            '</th>'+
+
+                                            '<th align="center">'+
+                                                '<div class="col-md-10">'+                                            
+                                                    '<label class="control-label" for="bentuktangki-stlh">Bentuk Tangki</label>'+
+                                                    '<select class="form-control" name="bentuktangki-stlh['+mtm_stlh_ctr+']" id="bentuktangki-stlh-'+mtm_stlh_ctr+'" onchange="select_tangki_stlh('+mtm_stlh_ctr+')">'+
+                                                        '<option value="--">--</option>'+
+                                                        '<option value="Tabung">Tabung</option>'+
+                                                        '<option value="Balok">Balok</option>'+
+                                                    '</select>'+
+                                                '</div>'+
+                                            '</th>'+
+                                        '</div>'+
+                                    '</tr>'+
+                                    '</thead>'+
+                                    '<tbody hidden id="var-balok-stlh-'+mtm_stlh_ctr+'">'+
+                                        '<tr>'+
+                                            '<td></td>'+
+                                            '<td>'+
+                                                '<div class="col-md-4">'+
+                                                    '<label class="control-label">Panjang </label>'+
+                                                '</div>'+
+                                            '</td>'+
+                                            '<td>'+
+                                                '<div class="col-md-4">'+
+                                                    '<input type="text" class="form-control" name="bal_pjg['+mtm_stlh_ctr+']">'+
+                                                '</div>'+
+                                            '</td>'+
+                                        '</tr>'+
+                                         '<tr>'+
+                                            '<td ></td>'+
+                                            '<td>'+
+                                                '<div class="col-md-4">'+
+                                                    '<label class="control-label">Lebar (meter)</label>'+
+                                                '</div>'+
+                                            '</td>'+
+                                            '<td>'+
+                                                '<div class="col-md-4">'+
+                                                    '<input type="text" class="form-control" name="bal_leb['+mtm_stlh_ctr+']">'+
+                                                '</div>'+
+                                            '</td>'+
+                                        '</tr>'+
+                                        '<tr>'+
+                                            '<td></td>'+
+                                            '<td>'+
+                                                '<div class="col-md-4">'+
+                                                    '<label class="control-label">Tinggi (meter)</label>'+
+                                                '</div>'+
+                                            '</td>'+
+                                            '<td>'+
+                                                '<div class="col-md-4">'+
+                                                    '<input type="text" class="form-control" name="bal_ting['+mtm_stlh_ctr+']">'+
+                                                '</div>'+
+                                            '</td>'+
+                                        '</tr>'+
+                                    '</tbody>'+
+
+                                    '<tbody hidden id="var-tab-stlh-'+mtm_stlh_ctr+'">'+                                    
+                                        '<tr>'+
+                                            '<td></td>'+
+                                            '<td>'+
+                                                '<div class="col-md-4">'+
+                                                    '<label class="control-label">Tinggi (meter)</label>'+
+                                                '</div>'+
+                                            '</td>'+
+                                            '<td>'+
+                                                '<div class="col-md-4">'+
+                                                    '<input type="text" class="form-control" name="tab_ting['+mtm_stlh_ctr+']">'+
+                                                '</div>'+
+                                            '</td>'+
+                                        '</tr>'+
+                                        '<tr>'+
+                                            '<td></td>'+
+                                            '<td>'+
+                                                '<div class="col-md-4">'+
+                                                    '<label class="control-label">Jari-jari (meter)</label>'+
+                                                '</div>'+
+                                            '</td>'+
+                                            '<td>'+
+                                                '<div class="col-md-4">'+
+                                                    '<input type="text" class="form-control" name="tab_jar['+mtm_stlh_ctr+']">'+
+                                                '</div>'+
+                                            '</td>'+
+                                        '</tr>'+
+                                    '</tbody>';
+        mtm_stlh_ctr++;
+        mtm_stlh_alph++;
+    }
+</script>
+
+<script type="text/javascript">
+    function multiload(){
+        tambah_mtm_sblm();
+        tambah_mtm_stlh();
+    }
+</script>
+
 </body>
 </html>
