@@ -556,5 +556,21 @@
     }
 </script>
 
+<script type="text/javascript">
+    upl_ctr = 2;
+    upl_alph = 66;
+    
+    function tambah_upload(){        
+        var isi_table = document.getElementById('isi-table-upload');
+
+        isi_table.innerHTML += '<tr>'+
+                                    '<th align="center">Tabel Kalibrasi Tangki '+ String.fromCharCode(upl_alph) +'</th>'+
+                                    '<th align="center"><a href="" class="btn btn-primary"><span class="glyphicon glyphicon-cloud-upload"></span>Upload</a></th>'+
+                                '</tr>';
+        upl_ctr++;
+        upl_alph++;
+    }
+</script>
+
 </body>
 </html>

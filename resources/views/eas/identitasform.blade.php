@@ -487,7 +487,7 @@
                                                         </th>
                                                         <th align="center">
                                                             <div class="col-md-4">
-                                                                {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}
+                                                                {!! Form::date('ta_sblm', null, ['class' => 'form-control']) !!}
                                                             </div>
                                                         </th>
                                                     </div>
@@ -502,7 +502,7 @@
                                                         </th>
                                                         <th align="center">
                                                             <div class="col-md-4">
-                                                                {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}
+                                                                {!! Form::date('ta_sblm', null, ['class' => 'form-control']) !!}
                                                             </div>
                                                         </th>
                                                     </div>
@@ -590,30 +590,25 @@
 
                                 <div class="form-group">
                                     <table class="table table-hover">
-                                        <tbody>
-                                        <tr>
-                                            <th align="center">Tabel Kalibrasi Tangki A</th>
-                                            <th align="center"><a href="" class="btn btn-primary"><span class="glyphicon glyphicon-cloud-upload"></span>Upload</a></th>
-                                        </tr>
-
-                                        <tr>
-                                            <th align="center">Tabel Kalibrasi Tangki B</th>
-                                            <th align="center"><a href="" class="btn btn-primary"><span class="glyphicon glyphicon-cloud-upload"></span>Upload</a></th>
-                                        </tr>
-
-                                        <tr>
-                                            <th align="center">Tabel Kalibrasi Tangki C</th>
-                                            <th align="center"><a href="" class="btn btn-primary"><span class="glyphicon glyphicon-cloud-upload"></span>Upload</a></th>
-                                        </tr>
+                                        <tbody id="isi-table-upload">
+                                            <tr>
+                                                <th align="center">Tabel Kalibrasi Tangki A</th>
+                                                <th align="center"><a href="" class="btn btn-primary"><span class="glyphicon glyphicon-cloud-upload"></span>Upload</a></th>
+                                            </tr>
                                         </tbody>
                                     </table>
+                                    <div class="form-group">
+                                        <th align="center">
+                                            <button type="button" align="right" class="btn btn-success" onclick="tambah_upload()">Tambah</button>
+                                        </th>                                        
+                                    </div>
                                 </div>
 
 
 
                                 <div class="btn-group" role="group" style="float: right;">
                                     <a data-toggle="tab" href="#tab10" data-trigger="tab">
-                                        <button type="button" align="right" class="btn btn-info btn-md mundur">Kembali</button>
+                                        <button type="button" align="right" class="btn btn-warning btn-md mundur">Kembali</button>
                                     </a>
                                 </div>
                             </div>
