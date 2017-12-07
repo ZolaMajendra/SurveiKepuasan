@@ -101,6 +101,7 @@
                                 {!! Form::label('unitpln', 'Unit PLN yang Diaudit', ['class' => 'control-label']) !!}
                                 {!! Form::select('up_audit', [
                                     '' => '--',
+                                    'Indonesia' => 'Indonesia',
                                     'Direktorat Bisnis Regional Maluku dan Papua' => 'Direktorat Bisnis Regional Maluku dan Papua',
                                     'Wilayah Papua & Papua Barat' => 'Wilayah Papua & Papua Barat',
                                     'Wilayah Maluku & Maluku Utara'=> 'Wilayah Maluku & Maluku Utara',
