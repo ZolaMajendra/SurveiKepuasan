@@ -235,7 +235,7 @@
                                             </div>
                                             </th>
                                             <th align="center">
-                                            <div class="col-md-4">
+                                            <div class="col-md-6">
                                                 {!! Form::text('kalib_sblm[0]', null, ['class' => 'form-control']) !!}
                                             </div>
                                             </th>
@@ -296,7 +296,7 @@
                                                         </div>
                                                     </th>
                                                     <th align="center">
-                                                        <div class="col-md-4">
+                                                        <div class="col-md-8">
                                                             {!! Form::text('vol_litre_sblm[0]', null, ['class' => 'form-control']) !!}
                                                         </div>
                                                     <th align="center">
@@ -305,7 +305,7 @@
                                                         </div>
                                                     </th>
                                                     <th align="center">
-                                                        <div class="col-md-4">
+                                                        <div class="col-md-8">
                                                             {!! Form::text('suhu_litre_sblm[0]', null, ['class' => 'form-control']) !!}
                                                         </div>
                                                     </th>
@@ -344,7 +344,7 @@
                                                 </div>
                                                 </th>
                                                 <th align="center">
-                                                <div class="col-md-4">
+                                                <div class="col-md-6">
                                                     {!! Form::text('kalib_stlh[0]', null, ['class' => 'form-control']) !!}
                                                 </div>
                                                 </th>
@@ -407,7 +407,7 @@
                                                         </div>
                                                     </th>
                                                     <th align="center">
-                                                        <div class="col-md-4">
+                                                        <div class="col-md-8">
                                                             {!! Form::text('vol_litre_stlh[0]', null, ['class' => 'form-control']) !!}
                                                         </div>
                                                     <th align="center">
@@ -416,7 +416,7 @@
                                                         </div>
                                                     </th>
                                                     <th align="center">
-                                                        <div class="col-md-4">
+                                                        <div class="col-md-8">
                                                             {!! Form::text('suhu_litre_stlh[0]', null, ['class' => 'form-control']) !!}
                                                         </div>
                                                     </th>
@@ -457,7 +457,7 @@
                                                             </div>
                                                         </th>
                                                         <th align="center">
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-6">
                                                                 {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}
                                                             </div>
                                                         </th>
@@ -472,7 +472,7 @@
                                                             </div>
                                                         </th>
                                                         <th align="center">
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-6">
                                                                 {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}
                                                             </div>
                                                         </th>
@@ -487,7 +487,7 @@
                                                             </div>
                                                         </th>
                                                         <th align="center">
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-6">
                                                                 {!! Form::date('ta_sblm', null, ['class' => 'form-control']) !!}
                                                             </div>
                                                         </th>
@@ -502,7 +502,7 @@
                                                             </div>
                                                         </th>
                                                         <th align="center">
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-6">
                                                                 {!! Form::date('ta_sblm', null, ['class' => 'form-control']) !!}
                                                             </div>
                                                         </th>
@@ -517,7 +517,7 @@
                                                             </div>
                                                         </th>
                                                         <th align="center">
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-6">
                                                                 {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}
                                                             </div>
                                                         </th>
