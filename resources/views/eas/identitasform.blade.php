@@ -187,23 +187,23 @@
                                 <table class="table table-hover">
                                     <tbody>
                                         <tr>
-                                            <th align="center">SOP Penerimaan BBM Moda Transportasi Truk</th>
+                                            <th align="center">SOP Penerimaan BBM</th>
                                             <th align="center"><a href="" class="btn btn-primary"><span class="glyphicon glyphicon-cloud-download"></span>Download</a></th>
                                         </tr>
                                         <tr>
-                                            <th align="center">SOP Penerimaan BBM Moda Transportasi Tongkang</th>
+                                            <th align="center">BPM Penerimaan BBM Moda Transportasi Truk</th>
                                             <th align="center"><a href="" class="btn btn-primary"><span class="glyphicon glyphicon-cloud-download"></span>Download</a></th>
                                         </tr>
                                         <tr>
-                                            <th align="center">SOP Penerimaan BBM Moda Transportasi Pipa</th>
+                                            <th align="center">BPM Penerimaan BBM Moda Transportasi Tongkang</th>
                                             <th align="center"><a href="" class="btn btn-primary"><span class="glyphicon glyphicon-cloud-download"></span>Download</a></th>
                                         </tr>
                                         <tr>
-                                            <th align="center">SOP Penerimaan BBM Moda Transportasi Campuran</th>
+                                            <th align="center">BPM Penerimaan BBM Moda Transportasi Pipa</th>
                                             <th align="center"><a href="" class="btn btn-primary"><span class="glyphicon glyphicon-cloud-download"></span>Download</a></th>
                                         </tr>
                                         <tr>
-                                            <th align="center">BPM Penerimaan BBM</th>
+                                            <th align="center">BPM Penerimaan BBM Moda Transportasi Campuran</th>
                                             <th align="center"><a href="" class="btn btn-primary"><span class="glyphicon glyphicon-cloud-download"></span>Download</a></th>
                                         </tr>
                                     </tbody>
