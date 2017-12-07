@@ -101,6 +101,7 @@
                                 {!! Form::label('unitpln', 'Unit PLN yang Diaudit', ['class' => 'control-label']) !!}
                                 {!! Form::select('up_audit', [
                                     '' => '--',
+                                    'Indonesia' => 'Indonesia',
                                     'Direktorat Bisnis Regional Maluku dan Papua' => 'Direktorat Bisnis Regional Maluku dan Papua',
                                     'Wilayah Papua & Papua Barat' => 'Wilayah Papua & Papua Barat',
                                     'Wilayah Maluku & Maluku Utara'=> 'Wilayah Maluku & Maluku Utara',
@@ -187,23 +188,23 @@
                                 <table class="table table-hover">
                                     <tbody>
                                         <tr>
-                                            <th align="center">SOP Penerimaan BBM Moda Transportasi Truk</th>
+                                            <th align="center">SOP Penerimaan BBM</th>
                                             <th align="center"><a href="" class="btn btn-primary"><span class="glyphicon glyphicon-cloud-download"></span>Download</a></th>
                                         </tr>
                                         <tr>
-                                            <th align="center">SOP Penerimaan BBM Moda Transportasi Tongkang</th>
+                                            <th align="center">BPM Penerimaan BBM Moda Transportasi Truk</th>
                                             <th align="center"><a href="" class="btn btn-primary"><span class="glyphicon glyphicon-cloud-download"></span>Download</a></th>
                                         </tr>
                                         <tr>
-                                            <th align="center">SOP Penerimaan BBM Moda Transportasi Pipa</th>
+                                            <th align="center">BPM Penerimaan BBM Moda Transportasi Tongkang</th>
                                             <th align="center"><a href="" class="btn btn-primary"><span class="glyphicon glyphicon-cloud-download"></span>Download</a></th>
                                         </tr>
                                         <tr>
-                                            <th align="center">SOP Penerimaan BBM Moda Transportasi Campuran</th>
+                                            <th align="center">BPM Penerimaan BBM Moda Transportasi Pipa</th>
                                             <th align="center"><a href="" class="btn btn-primary"><span class="glyphicon glyphicon-cloud-download"></span>Download</a></th>
                                         </tr>
                                         <tr>
-                                            <th align="center">BPM Penerimaan BBM</th>
+                                            <th align="center">BPM Penerimaan BBM Moda Transportasi Campuran</th>
                                             <th align="center"><a href="" class="btn btn-primary"><span class="glyphicon glyphicon-cloud-download"></span>Download</a></th>
                                         </tr>
                                     </tbody>
@@ -234,7 +235,7 @@
                                             </div>
                                             </th>
                                             <th align="center">
-                                            <div class="col-md-4">
+                                            <div class="col-md-6">
                                                 {!! Form::text('kalib_sblm[0]', null, ['class' => 'form-control']) !!}
                                             </div>
                                             </th>
@@ -295,7 +296,7 @@
                                                         </div>
                                                     </th>
                                                     <th align="center">
-                                                        <div class="col-md-4">
+                                                        <div class="col-md-8">
                                                             {!! Form::text('vol_litre_sblm[0]', null, ['class' => 'form-control']) !!}
                                                         </div>
                                                     <th align="center">
@@ -304,7 +305,7 @@
                                                         </div>
                                                     </th>
                                                     <th align="center">
-                                                        <div class="col-md-4">
+                                                        <div class="col-md-8">
                                                             {!! Form::text('suhu_litre_sblm[0]', null, ['class' => 'form-control']) !!}
                                                         </div>
                                                     </th>
@@ -343,7 +344,7 @@
                                                 </div>
                                                 </th>
                                                 <th align="center">
-                                                <div class="col-md-4">
+                                                <div class="col-md-6">
                                                     {!! Form::text('kalib_stlh[0]', null, ['class' => 'form-control']) !!}
                                                 </div>
                                                 </th>
@@ -406,7 +407,7 @@
                                                         </div>
                                                     </th>
                                                     <th align="center">
-                                                        <div class="col-md-4">
+                                                        <div class="col-md-8">
                                                             {!! Form::text('vol_litre_stlh[0]', null, ['class' => 'form-control']) !!}
                                                         </div>
                                                     <th align="center">
@@ -415,7 +416,7 @@
                                                         </div>
                                                     </th>
                                                     <th align="center">
-                                                        <div class="col-md-4">
+                                                        <div class="col-md-8">
                                                             {!! Form::text('suhu_litre_stlh[0]', null, ['class' => 'form-control']) !!}
                                                         </div>
                                                     </th>
@@ -456,7 +457,7 @@
                                                             </div>
                                                         </th>
                                                         <th align="center">
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-6">
                                                                 {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}
                                                             </div>
                                                         </th>
@@ -467,11 +468,11 @@
                                                     <div class="form-group">
                                                         <th align="center">
                                                             <div class="col-md-10">
-                                                                <label>Kuantitas (liter)</label>
+                                                                <label>Kuantitas yang tertera pada DO (liter)</label>
                                                             </div>
                                                         </th>
                                                         <th align="center">
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-6">
                                                                 {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}
                                                             </div>
                                                         </th>
@@ -486,7 +487,7 @@
                                                             </div>
                                                         </th>
                                                         <th align="center">
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-6">
                                                                 {!! Form::date('ta_sblm', null, ['class' => 'form-control']) !!}
                                                             </div>
                                                         </th>
@@ -501,7 +502,7 @@
                                                             </div>
                                                         </th>
                                                         <th align="center">
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-6">
                                                                 {!! Form::date('ta_sblm', null, ['class' => 'form-control']) !!}
                                                             </div>
                                                         </th>
@@ -516,7 +517,7 @@
                                                             </div>
                                                         </th>
                                                         <th align="center">
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-6">
                                                                 {!! Form::text('ta_sblm', null, ['class' => 'form-control']) !!}
                                                             </div>
                                                         </th>

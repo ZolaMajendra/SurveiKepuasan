@@ -198,7 +198,7 @@
 
         var th2 = document.createElement('th');
         th2.setAttribute('align', 'center');
-        th2.innerHTML += '<div class="col-md-4"><input class="form-control" name="kalib_sblm['+kalib_sblm_ctr+']" type="text"></div>';
+        th2.innerHTML += '<div class="col-md-6"><input class="form-control" name="kalib_sblm['+kalib_sblm_ctr+']" type="text"></div>';
 
         isi_table.appendChild(row);
         row.appendChild(th1);
@@ -224,7 +224,7 @@
 
         var th2 = document.createElement('th');
         th2.setAttribute('align', 'center');
-        th2.innerHTML += '<div class="col-md-4"><input class="form-control" name="kalib_sblm['+kalib_stlh_ctr+']" type="text"></div>';
+        th2.innerHTML += '<div class="col-md-6"><input class="form-control" name="kalib_sblm['+kalib_stlh_ctr+']" type="text"></div>';
 
         isi_table.appendChild(row);
         row.appendChild(th1);
@@ -248,7 +248,7 @@
                                     '</div>'+
                                 '</th>'+
                                 '<th align="center">'+
-                                    '<div class="col-md-4">'+
+                                    '<div class="col-md-8">'+
                                         '<input class="form-control" name="vol_litre_sblm['+litre_sblm_ctr+']" type="text">'+
                                     '</div>'+
                                 '<th align="center">'+
@@ -257,7 +257,7 @@
                                     '</div>'+
                                 '</th>'+
                                 '<th align="center">'+
-                                    '<div class="col-md-4">'+
+                                    '<div class="col-md-8">'+
                                     '<input class="form-control" name="suhu_litre_sblm['+litre_sblm_ctr+']" type="text">'+
                                     '</div>'+
                                 '</th>'+
@@ -283,7 +283,7 @@
                                     '</div>'+
                                 '</th>'+
                                 '<th align="center">'+
-                                    '<div class="col-md-4">'+
+                                    '<div class="col-md-8">'+
                                         '<input class="form-control" name="vol_litre_stlh['+litre_stlh_ctr+']" type="text">'+
                                     '</div>'+
                                 '<th align="center">'+
@@ -292,7 +292,7 @@
                                     '</div>'+
                                 '</th>'+
                                 '<th align="center">'+
-                                    '<div class="col-md-4">'+
+                                    '<div class="col-md-8">'+
                                     '<input class="form-control" name="suhu_litre_stlh['+litre_stlh_ctr+']" type="text">'+
                                     '</div>'+
                                 '</th>'+
@@ -361,7 +361,7 @@
                                                 '</div>'+
                                             '</td>'+
                                             '<td>'+
-                                                '<div class="col-md-4">'+
+                                                '<div class="col-md-8">'+
                                                     '<input type="text" class="form-control" name="bal_pjg['+mtm_sblm_ctr+']">'+
                                                 '</div>'+
                                             '</td>'+
@@ -374,7 +374,7 @@
                                                 '</div>'+
                                             '</td>'+
                                             '<td>'+
-                                                '<div class="col-md-4">'+
+                                                '<div class="col-md-8">'+
                                                     '<input type="text" class="form-control" name="bal_leb['+mtm_sblm_ctr+']">'+
                                                 '</div>'+
                                             '</td>'+
@@ -387,7 +387,7 @@
                                                 '</div>'+
                                             '</td>'+
                                             '<td>'+
-                                                '<div class="col-md-4">'+
+                                                '<div class="col-md-8">'+
                                                     '<input type="text" class="form-control" name="bal_ting['+mtm_sblm_ctr+']">'+
                                                 '</div>'+
                                             '</td>'+
@@ -403,7 +403,7 @@
                                                 '</div>'+
                                             '</td>'+
                                             '<td>'+
-                                                '<div class="col-md-4">'+
+                                                '<div class="col-md-8">'+
                                                     '<input type="text" class="form-control" name="tab_ting['+mtm_sblm_ctr+']">'+
                                                 '</div>'+
                                             '</td>'+
@@ -416,7 +416,7 @@
                                                 '</div>'+
                                             '</td>'+
                                             '<td>'+
-                                                '<div class="col-md-4">'+
+                                                '<div class="col-md-8">'+
                                                     '<input type="text" class="form-control" name="tab_jar['+mtm_sblm_ctr+']">'+
                                                 '</div>'+
                                             '</td>'+
@@ -483,7 +483,7 @@
                                                 '</div>'+
                                             '</td>'+
                                             '<td>'+
-                                                '<div class="col-md-4">'+
+                                                '<div class="col-md-8">'+
                                                     '<input type="text" class="form-control" name="bal_pjg['+mtm_stlh_ctr+']">'+
                                                 '</div>'+
                                             '</td>'+
@@ -496,7 +496,7 @@
                                                 '</div>'+
                                             '</td>'+
                                             '<td>'+
-                                                '<div class="col-md-4">'+
+                                                '<div class="col-md-8">'+
                                                     '<input type="text" class="form-control" name="bal_leb['+mtm_stlh_ctr+']">'+
                                                 '</div>'+
                                             '</td>'+
@@ -509,7 +509,7 @@
                                                 '</div>'+
                                             '</td>'+
                                             '<td>'+
-                                                '<div class="col-md-4">'+
+                                                '<div class="col-md-8">'+
                                                     '<input type="text" class="form-control" name="bal_ting['+mtm_stlh_ctr+']">'+
                                                 '</div>'+
                                             '</td>'+
@@ -525,7 +525,7 @@
                                                 '</div>'+
                                             '</td>'+
                                             '<td>'+
-                                                '<div class="col-md-4">'+
+                                                '<div class="col-md-8">'+
                                                     '<input type="text" class="form-control" name="tab_ting['+mtm_stlh_ctr+']">'+
                                                 '</div>'+
                                             '</td>'+
@@ -538,7 +538,7 @@
                                                 '</div>'+
                                             '</td>'+
                                             '<td>'+
-                                                '<div class="col-md-4">'+
+                                                '<div class="col-md-8">'+
                                                     '<input type="text" class="form-control" name="tab_jar['+mtm_stlh_ctr+']">'+
                                                 '</div>'+
                                             '</td>'+
