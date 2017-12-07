@@ -86,7 +86,7 @@
                         <img src="adminlte/dist/img/pln2.png" alt="PLNImage" width="300" height="420">
                     </div>
                     <div class="m-b-md" style="padding-top: 50px; font-size: 20px">
-                        <strong><span>Expert Audit System</span></strong>
+                        <h1><strong><span><em>easy-audit</em></span></strong></h1>
                     </div>
                 </div>
             </div>
