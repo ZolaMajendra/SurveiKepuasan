@@ -468,7 +468,7 @@
                                                     <div class="form-group">
                                                         <th align="center">
                                                             <div class="col-md-10">
-                                                                <label>Kuantitas (liter)</label>
+                                                                <label>Kuantitas yang tertera pada DO (liter)</label>
                                                             </div>
                                                         </th>
                                                         <th align="center">
